@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "DINNext";
+  src: url("fonts/DINNext-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DINNext";
+  src: url("fonts/DINNext-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DINNext";
+  src: url("fonts/DINNext-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --brand-red: #bd3532;
   --brand-red-dark: #9e2b29;
@@ -8,6 +32,7 @@
   --line: #e8e6e4;
   --page-pad: clamp(1rem, 4vw, 1.5rem);
   --max: 1100px;
+  --font: "DINNext", system-ui, sans-serif;
 }
 
 * {
@@ -21,7 +46,7 @@ html {
 }
 
 body {
-  font-family: "Manrope", system-ui, sans-serif;
+  font-family: var(--font);
   color: var(--ink);
   background:
     radial-gradient(ellipse 80% 50% at 100% -10%, rgba(189, 53, 50, 0.08), transparent 55%),
@@ -116,7 +141,7 @@ body.viewer-open main {
 }
 
 .viewer-bar h1 {
-  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-family: var(--font);
   font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -172,7 +197,7 @@ body.viewer-open main {
 }
 
 .hero h1 {
-  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-family: var(--font);
   font-size: clamp(1.6rem, 5vw, 2.25rem);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -207,7 +232,7 @@ body.viewer-open main {
 }
 
 .card h2 {
-  font-family: "Space Grotesk", "Manrope", sans-serif;
+  font-family: var(--font);
   font-size: clamp(1rem, 2.8vw, 1.12rem);
   font-weight: 600;
   letter-spacing: -0.02em;
