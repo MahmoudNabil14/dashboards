@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>silk links — Dashboards</title>
+    <link rel="icon" href="icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <img class="wordmark" src="logo-wordmark.png" alt="silk links" />
+          <img class="mark" src="icon.png" alt="" aria-hidden="true" />
+          <div class="brand-meta">
+            Logistics &amp; Distribution<br />
+            Dashboard Portal
+          </div>
+        </div>
+        <button type="button" class="back-btn hidden" id="backBtn">← All dashboards</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="homeView">
+        <section class="hero">
+          <h1>Dashboards</h1>
+          <p>Select a report to open.</p>
+        </section>
+        <section class="grid" id="grid" aria-label="Dashboard list"></section>
+      </div>
+
+      <section id="viewerView" class="viewer hidden" aria-label="Dashboard viewer">
+        <div class="viewer-bar">
+          <h1 id="viewerTitle"></h1>
+        </div>
+        <iframe
+          id="viewerFrame"
+          title="Power BI dashboard"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="siteFooter">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="icon.png" alt="" aria-hidden="true" />
+          <span>silk links · Logistics &amp; Distribution</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
